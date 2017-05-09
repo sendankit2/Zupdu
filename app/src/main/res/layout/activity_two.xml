@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.kukuwalia.zupdu.MainUserArea">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/relLayoutTopBar"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="FILTERS"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40dp"
+                android:gravity="center_horizontal" />
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutTopBar"
+            android:layout_above="@+id/relLayoutBotBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:id="@+id/rentLabelTextView1"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/priceRangeRadioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/rentLabelTextView1"
+                android:text="Less than 1000" />
+
+            <RadioButton
+                android:id="@+id/priceRangeRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/priceRangeRadioButton1"
+                android:text="1000 - 2000" />
+
+            <RadioButton
+                android:id="@+id/priceRangeRadioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/priceRangeRadioButton2"
+                android:text="2000 - 3000" />
+
+            <RadioButton
+                android:id="@+id/priceRangeRadioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/priceRangeRadioButton3"
+                android:text="Greater than 3000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Rooms"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:id="@+id/allRoomsLabelTextView"
+                android:textColor="#000000"
+                android:layout_below="@+id/priceRangeRadioButton4"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/privateRoomRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/allRoomsLabelTextView"
+                android:text="Private" />
+
+            <RadioButton
+                android:id="@+id/sharedRoomRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/privateRoomRadioButton"
+                android:text="Shared" />
+
+            <RadioButton
+                android:id="@+id/allRoomRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/sharedRoomRadioButton"
+                android:text="All" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Baths"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:id="@+id/bathLabelTextView"
+                android:textColor="#000000"
+                android:layout_toRightOf="@id/rentLabelTextView1"
+                android:layout_marginLeft="190dp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/privateBathRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/bathLabelTextView"
+                android:layout_marginLeft="110dp"
+                android:layout_toRightOf="@id/priceRangeRadioButton1"
+                android:text="Private" />
+
+            <RadioButton
+                android:id="@+id/sharedBathRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/privateBathRadioButton"
+                android:layout_marginLeft="130dp"
+                android:layout_toRightOf="@id/priceRangeRadioButton2"
+                android:text="Shared" />
+
+            <RadioButton
+                android:id="@+id/allBathRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/sharedBathRadioButton"
+                android:layout_marginLeft="130dp"
+                android:layout_toRightOf="@id/priceRangeRadioButton3"
+                android:text="All" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pets"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:id="@+id/petsLabelTextView"
+                android:textColor="#000000"
+                android:layout_below="@id/allBathRadioButton"
+                android:layout_marginLeft="250dp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/dogsRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/petsLabelTextView"
+                android:layout_marginLeft="130dp"
+                android:layout_toRightOf="@id/allRoomsLabelTextView"
+                android:text="Allowed Dogs" />
+
+            <RadioButton
+                android:id="@+id/catsRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/dogsRadioButton"
+                android:layout_marginLeft="155dp"
+                android:layout_toRightOf="@id/privateRoomRadioButton"
+                android:text="Allowed Cats" />
+
+            <RadioButton
+                android:id="@+id/anyOptionRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/catsRadioButton"
+                android:layout_marginLeft="155dp"
+                android:layout_toRightOf="@id/sharedRoomRadioButton"
+                android:text="Any Option" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Furnished"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:id="@+id/furnishedLabelTextView"
+                android:textColor="#000000"
+                android:layout_below="@id/allRoomRadioButton"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/unFurnishedRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/furnishedLabelTextView"
+                android:text="Unfurnished" />
+
+            <RadioButton
+                android:id="@+id/fullyFurnishedRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_below="@+id/unFurnishedRadioButton"
+                android:text="Fully Furnished" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"
+                android:text="Search"
+                android:id="@+id/btnSearch"
+                android:layout_toRightOf="@id/unFurnishedRadioButton"
+                android:layout_below="@id/anyOptionRadioButton"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="130dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/relLayoutBotBar"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavView_Bar"
+                android:background="@color/colorPrimary"
+                app:menu="@menu/bottom_navigation_menu">
+
+            </android.support.design.widget.BottomNavigationView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

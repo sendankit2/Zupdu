@@ -1,0 +1,269 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/propertyDetailLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROPERTY DETAILS"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="40dp" />
+
+<TextView
+    android:id="@+id/squareFeetLabelTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/propertyDetailLabelTextView"
+    android:text="Square Feet:  "
+    android:textColor="#000000"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/squareFeetEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter area in square feet"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textColorHint="#C0C0C0"
+        android:layout_alignBaseline="@+id/squareFeetLabelTextView"
+        android:layout_toRightOf="@id/squareFeetLabelTextView"/>
+
+    <TextView
+        android:id="@+id/leaseTypeLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lease Type:  "
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/squareFeetLabelTextView"
+        android:layout_marginTop="5dp"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/longTermRadioButton"
+        android:layout_toRightOf="@+id/leaseTypeLabelTextView"
+        android:layout_below="@id/squareFeetEditText"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000000"
+        android:text="Long Term"
+        android:checked="false"
+        android:layout_marginTop="-5dp"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shortTermRadioButton"
+        android:layout_toRightOf="@+id/leaseTypeLabelTextView"
+        android:checked="false"
+        android:layout_below="@id/longTermRadioButton"
+        android:textColor="#000000"
+        android:layout_marginLeft="40dp"
+        android:text="Short Term"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bothTermRadioButton"
+        android:layout_toRightOf="@+id/leaseTypeLabelTextView"
+        android:layout_below="@id/shortTermRadioButton"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000000"
+        android:checked="false"
+        android:text="Both"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/availableFromLabelTextView"
+        android:text="Available From: "
+        android:layout_below="@id/bothTermRadioButton"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:id="@+id/availableFromEditText"
+        android:hint="Enter available date"
+        android:textColorHint="#C0C0C0"
+        android:textColor="#000000"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@+id/bothTermRadioButton"
+        android:layout_toRightOf="@+id/availableFromLabelTextView"
+        android:layout_alignBaseline="@+id/availableFromLabelTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bedsLabelTextView"
+        android:text="Number of Beds: "
+        android:layout_below="@id/availableFromLabelTextView"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bedsEditText"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:layout_marginTop="-15dp"
+        android:hint="Enter number of beds"
+        android:textColorHint="#C0C0C0"
+        android:layout_below="@+id/availableFromEditText"
+        android:layout_toRightOf="@+id/bedsLabelTextView"
+        android:layout_alignBaseline="@+id/bedLabelTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rentLabelTextView"
+        android:text="Rent: "
+        android:layout_below="@id/bedsLabelTextView"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rentEditText"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:layout_marginTop="-15dp"
+        android:hint="Enter the amount($):"
+        android:textColorHint="#C0C0C0"
+        android:layout_below="@+id/bedsEditText"
+        android:layout_toRightOf="@+id/rentLabelTextView"
+        android:layout_alignBaseline="@+id/rentLabelTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathLabelTextView"
+        android:text="Number of Baths: "
+        android:layout_below="@id/rentLabelTextView"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathEditText"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:layout_marginTop="-15dp"
+        android:hint="Number of baths($):"
+        android:textColorHint="#C0C0C0"
+        android:layout_below="@+id/rentEditText"
+        android:layout_toRightOf="@+id/bathLabelTextView"
+        android:layout_alignBaseline="@+id/bathLabelTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amenetiesLabelTextView"
+        android:text="Ameneties Included: "
+        android:layout_below="@id/bathLabelTextView"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/garbageCheckBox"
+        android:text="Garbage Disposal"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@id/amenetiesLabelTextView"
+        android:textColor="#000000"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/securityCheckBox"
+        android:text="Security System"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@+id/garbageCheckBox"
+        android:textColor="#000000"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/powerBackUpCheckBox"
+        android:text="Power Backup"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@id/securityCheckBox"
+        android:textColor="#000000"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/carParkCheckBox"
+        android:text="Car Park"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@id/powerBackUpCheckBox"
+        android:textColor="#000000"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/laundaryCheckBox"
+        android:text="Laundary Service"
+        android:layout_marginTop="-10dp"
+        android:layout_below="@+id/electricityCheckBox"
+        android:layout_toRightOf="@id/securityCheckBox"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000000"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/electricityCheckBox"
+        android:text="Electricity and Water Bill"
+        android:layout_below="@id/amenetiesLabelTextView"
+        android:layout_toRightOf="@id/garbageCheckBox"
+        android:textColor="#000000"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="30dp"
+        android:checked="false" />
+
+    <Button
+        android:id="@+id/btnTEST"
+        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff"
+        android:text="Save"
+        android:layout_toRightOf="@id/powerBackUpCheckBox"
+        android:layout_below="@id/laundaryCheckBox"
+        android:layout_marginLeft="100dp"/>
+
+</RelativeLayout>

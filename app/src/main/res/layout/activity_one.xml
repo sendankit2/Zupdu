@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kukuwalia.zupdu.MainUserArea">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="PROFILE"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40dp"
+                android:gravity="center_horizontal" />
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/topBar"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/profile_top"
+                android:id="@+id/BackgroundrelativeLayout">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile_picture"
+                app:civ_border_color="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                app:civ_border_width="4dp"
+                android:id="@+id/ivImage"/>
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivImage"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_camera_alt_black_24dp" />
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivCamera"
+                android:layout_below="@+id/ivImage"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_insert_photo_black_24dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstNameLabelTextView"
+                android:text="First Name:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/BackgroundrelativeLayout"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/firstNameLabelTextView"
+                android:layout_alignBaseline="@id/firstNameLabelTextView"
+                android:textColor="#000000"
+                android:hint="Enter first name"
+                android:textColorHint="#C0C0C0"
+                android:id="@+id/firstNameEditView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastNameLabelTextView"
+                android:text="Last Name:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/firstNameLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_toRightOf="@id/lastNameLabelTextView"
+                android:layout_alignBaseline="@id/lastNameLabelTextView"
+                android:hint="Enter last name"
+                android:textColorHint="#C0C0C0"
+                android:id="@+id/lastNameEditView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateOfBirthLabelTextView"
+                android:text="Date of Birth:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/lastNameLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/dateOfBirthEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter date of birth"
+                android:textColorHint="#C0C0C0"
+                android:textColor="#000000"
+                android:layout_toRightOf="@id/dateOfBirthLabelTextView"
+                android:layout_alignBaseline="@+id/dateOfBirthLabelTextView"
+                android:inputType="date" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderLabelTextView"
+                android:text="Gender:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/dateOfBirthLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/genderEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:hint="Specify gender"
+                android:textColorHint="#C0C0C0"
+                android:layout_toRightOf="@id/genderLabelTextView"
+                android:layout_alignBaseline="@+id/genderLabelTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailLabelTextView"
+                android:text="Email:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/genderLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:hint="Enter email address"
+                android:textColorHint="#C0C0C0"
+                android:layout_toRightOf="@id/emailLabelTextView"
+                android:layout_alignBaseline="@+id/emailLabelTextView"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneLabelTextView"
+                android:text="Phone:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/emailLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:hint="Enter phone number"
+                android:textColorHint="#C0C0C0"
+                android:layout_toRightOf="@id/phoneLabelTextView"
+                android:layout_alignBaseline="@+id/phoneLabelTextView"
+                android:inputType="phone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressLabelTextView"
+                android:text="Address:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/phoneLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addressEditText"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:hint="Enter billing address"
+                android:textColorHint="#C0C0C0"
+                android:layout_toRightOf="@id/addressLabelTextView"
+                android:layout_alignBaseline="@+id/addressLabelTextView"
+                android:inputType="textPostalAddress"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboutMeLabelTextView"
+                android:text="About Me:  "
+                android:textColor="#000000"
+                android:layout_below="@+id/addressLabelTextView"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="7dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/aboutMeEditText"
+                android:hint=" Tell us something about you not more than 100 words"
+                android:textColorHint="#C0C0C0"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#000000"
+                android:background="@drawable/border"
+                android:layout_below="@+id/aboutMeLabelTextView"
+                android:inputType="textMultiLine"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/aboutMeEditText"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="150dp"
+                android:id="@+id/btnSave"
+                android:background="@color/colorPrimary"
+
+                android:hint="Save"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottomNavView_Bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                app:menu="@menu/bottom_navigation_menu">
+
+
+            </android.support.design.widget.BottomNavigationView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.kukuwalia.zupdu.MainUserArea">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/relLayoutTopBar"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="LOGOUT"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40dp"
+                android:gravity="center_horizontal" />
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutTopBar"
+            android:layout_above="@+id/relLayoutBotBar">
+
+            <TextView
+                android:id="@+id/logout"
+                android:text="Are you sure you want to logout ?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/yesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logout"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:text="Yes"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/noButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logout"
+                android:layout_toRightOf="@+id/yesButton"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:text="No"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/relLayoutBotBar"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavView_Bar"
+                android:background="@color/colorPrimary"
+                app:menu="@menu/bottom_navigation_menu">
+
+            </android.support.design.widget.BottomNavigationView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

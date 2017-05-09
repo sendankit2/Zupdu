@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="67dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.kukuwalia.zupdu.Login"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:shadowColor="@color/text_shadow"
+        android:textColor="#ffffff"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:background="@color/colorPrimary"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff">
+            <EditText
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:id="@+id/etUsername"
+                android:hint="Username" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff">
+            <EditText
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:id="@+id/etPassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_marginBottom="40dp"/>
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:background="#FFFFFF"
+            android:text="Sign In"
+            android:id="@+id/bSignIn"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvPasswordLink"
+            android:text="forget password"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRegisterLink"
+            android:text="Register Here"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="right"
+            android:layout_marginBottom="60dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
